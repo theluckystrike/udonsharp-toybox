@@ -14,6 +14,19 @@ namespace black.kit.toybox
     /// </para>
     /// </summary>
     /// <remarks>
+    /// <para>
+    /// The check runs on the local client only. It changes what the local
+    /// player sees and can touch, and it is not an access-control or
+    /// anti-cheat mechanism.
+    /// </para>
+    /// <para>
+    /// The allowed display names are serialized into the world data, so they
+    /// travel with the built world. The component toggles the current state
+    /// rather than setting a fixed one, so the initial state chosen by the
+    /// scene author decides what a name in the allowlist means.
+    /// </para>
+    /// </remarks>
+    /// <remarks>
     /// Usage (in the inspector of Unity Editor):
     /// <list type="number">
     /// <item>
