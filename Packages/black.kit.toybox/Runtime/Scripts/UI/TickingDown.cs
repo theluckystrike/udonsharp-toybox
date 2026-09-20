@@ -11,6 +11,12 @@ namespace black.kit.toybox
     /// to the Text or TextMeshProUGUI uGUI component.
     /// </summary>
     /// <remarks>
+    /// The component displays the current local date and time on the
+    /// configured interval. It does not count down toward anything. The
+    /// value comes from <see cref="DateTime.Now"/>, so it resolves per
+    /// client and is not synchronized between players.
+    /// </remarks>
+    /// <remarks>
     /// Usage (in the inspector of Unity Editor):
     /// <list type="number">
     /// <item>
