@@ -34,6 +34,9 @@ namespace black.kit.toybox
         /// <remarks>
         /// ⚠️ The fallback string returns
         /// <strong>WITHOUT</strong> validation.
+        /// A <c>null</c> or empty display name passes the charset check,
+        /// because <see cref="StringUtils.AreAllCharsContained(string, string)"/>
+        /// returns <c>true</c> for a <c>null</c> or empty target.
         /// </remarks>
         /// <param name="player">Player instance.</param>
         /// <param name="safeCharset">
@@ -51,7 +54,7 @@ namespace black.kit.toybox
         /// player.GetSafePlayerName("abcde"); // "bcd"
         /// player.GetSafePlayerName("bcd"); // "bcd"
         /// player.GetSafePlayerName("def"); // null
-        /// player.GetSafePlayerName("abcde", "Fallback"); // "Fallback"
+        /// player.GetSafePlayerName("abcde", "Fallback"); // "bcd"
         /// ]]>
         /// </code>
         /// </example>
