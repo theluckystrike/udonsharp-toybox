@@ -25,9 +25,9 @@ namespace black.kit.toybox
     /// rather than setting a fixed one, so the initial state chosen by the
     /// scene author decides what a name in the allowlist means.
     /// </para>
-    /// </remarks>
-    /// <remarks>
+    /// <para>
     /// Usage (in the inspector of Unity Editor):
+    /// </para>
     /// <list type="number">
     /// <item>
     /// <description>
