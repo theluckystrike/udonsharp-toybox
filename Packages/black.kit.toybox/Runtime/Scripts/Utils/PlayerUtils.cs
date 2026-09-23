@@ -35,8 +35,13 @@ namespace black.kit.toybox
         /// ⚠️ The fallback string returns
         /// <strong>WITHOUT</strong> validation.
         /// A <c>null</c> or empty display name passes the charset check,
-        /// because <see cref="StringUtils.AreAllCharsContained(string, string)"/>
+        /// because
+        /// <see cref="StringUtils.AreAllCharsContained(string, string)"/>
         /// returns <c>true</c> for a <c>null</c> or empty target.
+        /// A <c>null</c> <paramref name="player"/> is not an invalid player:
+        /// the method falls back to <see cref="Networking.LocalPlayer"/> and
+        /// returns <paramref name="fallback"/> only when that player is
+        /// missing or invalid.
         /// </remarks>
         /// <param name="player">Player instance.</param>
         /// <param name="safeCharset">
